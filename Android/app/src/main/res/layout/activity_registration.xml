@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.simpleapp.Activities.RegistrationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp">
+
+        <RelativeLayout
+            android:id="@+id/patient_name_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutAppearance">
+                <EditText
+                    android:id="@+id/patient_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Patient's Name"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dob_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/patient_name_relative_layout">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutAppearance">
+                <EditText
+                    android:id="@+id/dob_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date of birth"
+                    android:focusable="false"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mobile_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/dob_relative_layout">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutAppearance">
+                <EditText
+                    android:id="@+id/mobile_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone number"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/radio_group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/mobile_relative_layout"
+            android:layout_centerHorizontal="true">
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="16dp"
+                    android:buttonTint="@color/colorPrimary"/>
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Female"
+                    android:textSize="16dp"
+                    android:buttonTint="@color/colorPrimary"/>
+
+                <RadioButton
+                    android:id="@+id/radio_trans_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Transgender"
+                    android:textSize="16dp"
+                    android:buttonTint="@color/colorPrimary"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/address_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/radio_group_layout">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutAppearance">
+                <EditText
+                    android:id="@+id/address_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Village or Colony" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/district_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/address_relative_layout"
+            android:layout_marginStart="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="District:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"/>
+                    <Spinner
+                        android:id="@+id/district_spinner"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false">
+                    </Spinner>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"/>
+                    <Spinner
+                        android:id="@+id/state_spinner"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false">
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="4dp"
+            android:background="@color/colorLightBlue"
+            android:text="Next"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

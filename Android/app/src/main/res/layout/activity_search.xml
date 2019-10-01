@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchActivity"
+    android:background="@color/colorGrey">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Name or Phone Number"
+            app:iconifiedByDefault="false"
+            android:layout_margin="8dp">
+        </android.support.v7.widget.SearchView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:layout_margin="8dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_activity_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_patient_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:textColor="@color/colorBlack"
+        android:visibility="gone"/>
+    
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register New Patient"
+        android:background="@color/colorLightBlue"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
